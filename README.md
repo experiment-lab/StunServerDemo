@@ -1,22 +1,31 @@
-# StunServerDemo
-A simplified STUN (Session Traversal Utilities for NAT) server written in Java to assist with public IP and port detection—useful for NAT traversal scenarios like peer-to-peer (P2P) communication.
+# 🌐 StunServerDemo – Simplified Java STUN Server
 
-🔧 Features
+**StunServerDemo** is a lightweight implementation of a STUN (Session Traversal Utilities for NAT) server written in Nodejs and javaScript. It helps clients determine their **public IP address and port** as seen from the outside network, making it useful in **NAT traversal** scenarios such as WebRTC and peer-to-peer (P2P) applications.
 
-Lightweight STUN server implementation based on RFC 5389
+---
 
-Supports basic binding requests for public IP and port discovery
+## 🔧 Features
 
-Console-based logging for debugging STUN message flow
+- 📡 **STUN Protocol Support**: Implements the basic **Binding Request** mechanism as described in [RFC 5389](https://tools.ietf.org/html/rfc5389).
+- 🧪 **Educational & Debug-Friendly**: Console-based logs for each request/response pair help understand STUN message flow.
+- ⚙️ **Minimal Setup**: No third-party libraries—just plain Npm packages and sockets.
+- 🧰 **Ideal for Testing**: Suitable for debugging connectivity issues, WebRTC testing, or building a deeper understanding of NAT behavior.
 
-Suitable for educational, debugging, and lightweight testing purposes
+---
 
-📦 Technologies Used
+## 🛠️ Technologies Used
 
-WebRTC (No external dependencies)
+- **UDP Server**: Uses `DatagramSocket` and `DatagramPacket` for low-level UDP communication.
+- **WebRTC Concepts**: STUN is integral to peer connection setup in WebRTC.
+- **STUN Protocol Parsing**: Parses incoming STUN requests and returns appropriate responses.
+- **JavaScript / Node.js**: Companion client-side examples or integration support.
 
-Socket Programming using DatagramSocket and DatagramPacket
+---
 
-Javascript and Nodejs
+## 🚀 Getting Started
 
-Implements core logic of STUN protocol parsing and response
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/experiment-lab/StunServerDemo.git
+cd StunServerDemo
